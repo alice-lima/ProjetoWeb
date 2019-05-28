@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<link rel="shortcut icon" href="resources/icon.ico">
+
+	<!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+	<script src="https://code.jquery.com/jquery-1.11.2.js"></script>
+
+	<script src="js/main.js"></script>
+
+    <title>Consulta</title>
+  </head>
+  <body>
+
+  	<nav class="navbar navbar-expand-md navbar-light fixed-top my-nav">
+  		<i class="fas fa-user-md"></i>
+		<a class="navbar-brand margemEsquerda">Consulta</a>
+		
+		<div class="collapse navbar-collapse" id="navbarCollapse" >
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="">Início <span class="sr-only">(current)</span></a>
+			 	</li>
+			  	<li class="nav-item topoDireito">
+					<output id="lblData" class="form-control"></output>
+		  		</li>
+	    	</ul>
+    	</div>	
+	</nav>
+	<br/><br/><br/>
+
+	<div id="topo" class="form-row quadrado">
+		<div class="form-group col-md-7">
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-header">Condição Atual do Paciente</h5>
+					</br>
+					<div class="form-group col-md-14">
+						<textarea type="text" class="form-control" placeholder="Observações a respeito do quadro atual do paciente" autocomplete="off"></textarea>
+					</div>
+					<div class="card-deck deck-buttoons" >
+						<div class="card">
+							<div class="card-body">
+								<button type="button" class="btn btn-lg btn-light btn-outline-info btn-info" onclick="show(mostrar)"><h5>Comportamentais</h5></button>
+								<div id="mostrar" class="invisivel">
+									</br>	
+									<label>Irritabilidade/agressividade</label>
+									<label>Agitação motora/inquietação</label>
+									<label>Apatia</label>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-body">
+								<button type="button" class="btn btn-lg btn-light btn-outline-info btn-info" onclick="show(mostrar2)"><h5>Neurológicas Convencionais</h5></button>
+								<div id="mostrar2" class="invisivel">
+									</br>	
+									<label>Dor de cabeça</label>
+									<label>Problemas de equilíbrio/tontura</label>
+									<label>Dificuldade de locomoção</label>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-body">
+								<button type="button" class="btn btn-lg btn-light btn-outline-info btn-info" onclick="show(mostrar3)"><h5>Cognitivas</h5></button>
+								<div id="mostrar3" class="invisivel">
+									</br>	
+									<label>Dificuldade de atenção/concentração</label>
+									<label>Dificuldade de memória</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="form-group col-md-3" style="margin-left: 8.2%;">
+			<div class="card text-center">
+				<a data-toggle="modal" data-target="#modalInfo">
+				<img class="card-img-top" src="resources/patient_login.png" alt="Imagem paciente">
+	  			<div class="card-body">
+			    	<h5 class="card-title">Nome Paciente</h5>
+			    	<h6 class="card-subtitle mb-2 text-muted">RGHC</h6>
+				</div>
+				</a>
+			</div>
+		</div>
+
+		<!-- Modal de Informações -->
+		<div class="modal fade" id="modalInfo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="exampleModalCenterTitle">Informações Gerais do Paciente</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		        <div class="form-row">
+		          <div class="form-group col-md-5">
+		            <label>Nome:</label>
+		            <output class="form-control">Pedro Henrique Silva</output>
+		          </div>
+		          <div class="form-group col-md-3">
+		            <label>RGHC:</label>
+		            <output class="form-control">9831732663</output>
+		          </div>
+		          <div class="form-group col-md-3">
+		            <label>Data de Nascimento:</label>
+		            <output class="form-control">23/06/1999</output>
+		          </div>
+		        </div>
+		      
+		        <div class="form-row">
+		          <div class="form-group col-md-3">
+		            <label>Data do TCE:</label>
+		            <output class="form-control">13/10/2012</output>
+		          </div>
+		          <div class="form-group col-md-6">
+		            <label>Causa acidente:</label>
+		            <output class="form-control">Acidente de trânsito (motorista ou passageiro)</output>
+		          </div>
+		          <div class="form-group col-md-2">
+		            <label>Tipo:</label>
+		            <output class="form-control">Civil</output>
+		          </div>
+		        </div>
+
+		        <div class="form-row">
+		          <div class="form-group col-md-3">
+		            <label>Perda de consciência:</label>
+		            <output class="form-control">24 horas</output>
+		          </div>
+		          <div class="form-group col-md-3">
+		            <label>Amnésia pós traumática:</label>
+		            <output class="form-control">1 semana</output>
+		          </div>
+		          <div class="form-group col-md-5">
+		            <label>Procedimento neurocirúrgico:</label>
+		            <output class="form-control">Descompressão do crânio</output>
+		          </div>
+		        </div>
+
+		        <div class="form-row">
+		          <div class="form-group col-md-11">
+		            <label>Medicação Atual:</label>
+		            <output class="form-control">Fenobarbital / Lamotrigina / Venlafaxina</output>
+		          </div>
+		        </div>
+
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+		         <button type="button" class="btn btn-primary" data-dismiss="modal">Perfil completo</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+
+	</div>
+
+	<div class="form-row quadrado">
+		<div class="form-group col-md-11">
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-header">Conduta médica</h5>
+				</div>
+					<div class="card-deck">
+						<div class="form-group col-md-7">
+							<div class="card">
+								<div class="card-body">
+									<h5 class="card-header">Retorno</h5>
+									<div class="form-row">
+										<div class="form-group col-md-7">
+											<label for="inputMedico">Nome do Médico</label>
+											<input type="text" class="form-control" id="inputMedico">
+									</div>
+										<div class="form-group col-md-4">
+											<label for="tipo">Especialidade Médica</label>
+											<select id="tipo" class="form-control">
+												<option>Selecione</option>
+												<option>Neurologista</option>
+												<option>Psicólogo(a)</option>
+												<option>Nutricionista</option>
+											</select>
+										</div>
+										<div class="form-group col-md-4">
+											<label for="inputRetorno">Dia da Consulta</label>
+											<input type="text" class="form-control" id="inputRetorno" placeholder="dd/mm/aaaa">
+										</div>
+										<div class="form-group col-md-4">
+											<label for="inputHorario">Horário da Consulta</label>
+											<input type="text" class="form-control" id="inputHorario" placeholder="00:00">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-group col-md-5">
+							<div class="card">
+								<div class="card-body">
+									<h5 class="card-header">Encaminhamento</h5>
+									</br>
+									<ul class="list-unstyled"> 
+										<li><input name="cboTerapiaOc" onclick="hide(inescondido)" type="checkbox"> Terapia Ocupacional</li>
+										<li><input name="cboPsicologiaFa" onclick="hide(inescondido)" type="checkbox"> Psicologia Familiar</li>
+										<li><input name="cboFonoaudiologia" onclick="hide(inescondido)" type="checkbox"> Fonoaudiologia</li>
+										<li><input name="cboNeuropsico" onclick="hide(inescondido)" type="checkbox"> Neuropsicologia</li>
+										<li><input name="cboOftalmo" onclick="hide(inescondido)" type="checkbox"> Oftalmologia</li>
+										<li><input name="cboAvaliacaoOptometrica" onclick="hide(inescondido)" type="checkbox"> Avaliação Optométrica</li>
+										<li><input name="cboAssistenteSocial" onclick="hide(inescondido)" type="checkbox"> Assistente Social</li>
+										<li><input name="cboOutros" onclick="show(inescondido)" type="checkbox"> Outros</li>
+										<div id="inescondido" class="invisivel">
+											<input type="text" class="form-control">
+										</div>
+									</ul>
+								</div>
+							</div>
+						</div>
+				<div class="form-group col-md-12">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-header">Solicitação de Exames</h5>
+							</br>
+							<div class="card-deck">
+								<div class="card">
+				   					<div class="card-body">
+				    					<h5 class="card-title">Neuroimagem</h5>
+				    					<ul>
+											<li><input type="radio" name="grupo3" value="" onclick="hide(escondido)"> Não</li>
+											<li><input type="radio" name="grupo3" value="" onclick="show(escondido)"> Sim
+												<ul id="escondido" class="invisivel">
+												<li><input name="cboRM" type="checkbox"> RM</li>
+												<li><input name="cboTCC" type="checkbox"> TCC</li>
+												</ul>
+											</li>
+										</ul>
+				    				</div>
+				 				</div>
+							<div class="card">
+    							<div class="card-body">
+		      						<h5 class="card-title">Sanguíneos</h5>
+		      						<ul>
+										<li><input type="radio" name="grupo4" value=""> Não</li>
+										<li><input type="radio" name="grupo4" value=""> Sim</li>
+									</ul>
+		   						</div>
+		  					</div>
+		  				<div class="card">
+		    				<div class="card-body">
+		      					<h5 class="card-title">De líquor</h5>
+		      					<ul>
+									<li><input type="radio" name="grupo5" value=""> Não</li>
+									<li><input type="radio" name="grupo5" value=""> Sim</li>
+								</ul>
+		    				</div>
+	  					</div>
+	  						</div>
+  							</br>
+		  					<div class="card-deck">
+		  						<div class="card">
+						  			<div class="card-body">
+						  				<h5 class="card-title">SPECT</h5>
+						  				<ul>
+											<li><input type="radio" name="grupo6" value=""> Não</li>
+											<li><input type="radio" name="grupo6" value=""> Sim</li>
+										</ul>
+									</div>
+								</div>
+							<div class="card">
+								<div class="card-body">
+									<h5 class="card-title">EEG</h5>
+									<ul>
+										<li><input type="radio" name="grupo7" value=""> Não</li>
+										<li><input type="radio" name="grupo7" value=""> Sim</li>
+									</ul>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-body">
+									<h5 class="card-title">Outro Exame</h5>
+									<input type="text" name="" class="form-control">
+								</div>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<a class="btn-topo" href="#topo">
+		<i class="fas fa-chevron-circle-up"></i>
+	</a>
+	<button id="seguir" class="btn btn-primary btn-lg quadrado">Salvar</button>
+
+  <!-- jQuery (obrigatório para plugins JavaScript do Bootstrap) -->
+    <script src="js/jquery.js"></script>
+    <!-- Inclui todos os plugins compilados (abaixo), ou inclua arquivos separadados se necessário -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+
+</html>
