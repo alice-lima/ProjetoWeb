@@ -270,30 +270,66 @@
 		<h5 class="card-header">Vícios</h5>
 		<br/>
 		<div class="form-row">
-			<div class="form-group col-md-4">
+			<div class="form-group col-md-4 quadrado custom-control custom-radio">
 				<h5 class="card-title">Uso/abuso/dependência de álcool</h5>
 				<ul class="list-unstyled">
-					<li><input type="radio" name="grupo3" value=""> Sim</li>
-					<li><input type="radio" name="grupo3" value=""> Não</li>
-					<li><input type="radio" name="grupo3" value=""> Não há informações</li>
-					<li><input type="radio" name="grupo3" value=""> Outro</li>
+					<li>
+						<div class="custom-control custom-radio">
+						  <input type="radio" id="customRadioSim" name="customRadio" class="custom-control-input">
+						  <label class="custom-control-label" for="customRadioSim">Sim</label>
+						</div>
+					</li>
+					<li>
+						<div class="custom-control custom-radio">
+						  <input type="radio" id="customRadioNao" name="customRadio" class="custom-control-input">
+						  <label class="custom-control-label" for="customRadioNao">Não</label>
+						</div>
+					</li>
+						<div class="custom-control custom-radio">
+						  <input type="radio" id="customRadioNaoInfo" name="customRadio" class="custom-control-input">
+						  <label class="custom-control-label" for="customRadioNaoInfo">Não há informações</label>
+						</div>
+					<li>
+						<div class="custom-control custom-radio">
+						  <input type="radio" id="customRadioOutro" name="customRadio" class="custom-control-input">
+						  <label class="custom-control-label" for="customRadioOutro">Outro</label>
+						</div>
+					</li>
 					<input type="text" class="form-control input-outros">
 				</ul>
 			</div>
 			
-			<div class="form-group col-md-4">
+			<div class="form-group col-md-4 custom-control custom-checkbox">
 					<h5 class="card-title">Uso de drogas ilícitas</h5>
 				<ul class="list-unstyled">
-				<form>
+				<form class="form-inline">
 					<li><input type="radio" onclick="hide(escondido)" name="grupo" value=""> Não</li>
 					<li><input type="radio" onclick="show(escondido)" name="grupo" value="" id="sim"> Sim</li>
 						<ul id="escondido" class="invisivel"> 
-							<li><input name="cboCocaina" type="checkbox"> Cocaína</li>
-							<li><input name="cboCrack" type="checkbox"> Crack</li>
-							<li><input name="cboHeroina" type="checkbox"> Heroína</li>
-							<li><input name="cboEcstasy" type="checkbox"> Ecstasy e/ou estimulantes</li>
-							<li><input name="cboMaconha" type="checkbox"> Maconha</li>
-							<li><input name="cboOutros" type="checkbox"> Outros</li>
+							<li>
+								<input name="cboCocaina" type="checkbox" class="custom-control-input" id="cboCocaina">
+								<label class="custom-control-label" for="cboCocaina">Cocaína</label>
+							</li>
+							<li>
+								<input name="cboCrack" type="checkbox" class="custom-control-input" id="cboCrack" >
+								<label class="custom-control-label" for="cboCrack">Crack</label>
+							</li>
+							<li>
+								<input name="cboHeroina" type="checkbox" class="custom-control-input" id="cboHeroina">
+								<label class="custom-control-label" for="cboHeroina">Heroína</label>
+							</li>
+							<li>
+								<input name="cboEcstasy" type="checkbox" class="custom-control-input" id="cboEcstasy">
+								<label class="custom-control-label" for="cboEcstasy">Ecstasy e/ou estimulantes</label>
+							</li>
+							<li>
+								<input name="cboMaconha" type="checkbox" class="custom-control-input" id="cboMaconha">
+								<label class="custom-control-label" for="cboMaconha">Maconha</label>
+							</li>
+							<li>
+								<input name="cboOutros" type="checkbox" class="custom-control-input" id="cboOutros">
+								<label class="custom-control-label" for="cboOutros">Outros</label>
+							</li>
 						<input type="text" class="form-control input-outros">
 						</ul>
 					</form>
@@ -301,13 +337,13 @@
 			</div>
 		</div>
 	</div>
-	
-	<br/>
-	<a class="btn-topo" href="#topo">
-		<i class="fas fa-chevron-circle-up"></i>
-	</a>
-		<button id="seguir" class="btn btn-primary btn-lg quadrado" onclick="testaCpf()">Continuar</button>
-	
+
+	<diV>
+		<a class="btn-topo" href="#topo">
+			<i class="fas fa-chevron-circle-up"></i>
+		</a>
+			<button id="seguir" class="btn btn-primary btn-lg quadrado" onclick="testaCpf()">Continuar</button>
+	</diV>
 	
 	<script src="https://code.jquery.com/jquery-1.11.2.js"></script>
 	<script src="js/main.js"></script>
