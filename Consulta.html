@@ -8,7 +8,7 @@
 	<link rel="shortcut icon" href="resources/icon.ico">
 
 	<!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
@@ -16,12 +16,12 @@
 
 	<script src="js/main.js"></script>
 
-    <title>Consulta</title>
+  <title>Consulta</title>
   </head>
   <body>
 
   	<nav class="navbar navbar-expand-md navbar-light fixed-top my-nav">
-  		<i class="fas fa-user-md"></i>
+  	<i class="fas fa-user-md"></i>
 		<a class="navbar-brand margemEsquerda">Consulta</a>
 		
 		<div class="collapse navbar-collapse" id="navbarCollapse" >
@@ -29,9 +29,9 @@
 				<li class="nav-item active">
 					<a class="nav-link" href="">Início <span class="sr-only">(current)</span></a>
 			 	</li>
-			  	<li class="nav-item topoDireito">
+			  <li class="nav-item topoDireito">
 					<output id="lblData" class="form-control"></output>
-		  		</li>
+		  	</li>
 	    	</ul>
     	</div>	
 	</nav>
@@ -84,7 +84,7 @@
 			</div>
 		</div>
 
-		<div class="form-group col-md-3" style="margin-left: 8.2%;">
+		<div class="form-group col-md-3 janela-flexivel">
 			<div class="card text-center">
 				<a data-toggle="modal" data-target="#modalInfo">
 				<img class="card-img-top" src="resources/patient_login.png" alt="Imagem paciente">
@@ -214,17 +214,55 @@
 									<h5 class="card-header">Encaminhamento</h5>
 									</br>
 									<ul class="list-unstyled"> 
-										<li><input name="cboTerapiaOc" onclick="hide(inescondido)" type="checkbox"> Terapia Ocupacional</li>
-										<li><input name="cboPsicologiaFa" onclick="hide(inescondido)" type="checkbox"> Psicologia Familiar</li>
-										<li><input name="cboFonoaudiologia" onclick="hide(inescondido)" type="checkbox"> Fonoaudiologia</li>
-										<li><input name="cboNeuropsico" onclick="hide(inescondido)" type="checkbox"> Neuropsicologia</li>
-										<li><input name="cboOftalmo" onclick="hide(inescondido)" type="checkbox"> Oftalmologia</li>
-										<li><input name="cboAvaliacaoOptometrica" onclick="hide(inescondido)" type="checkbox"> Avaliação Optométrica</li>
-										<li><input name="cboAssistenteSocial" onclick="hide(inescondido)" type="checkbox"> Assistente Social</li>
-										<li><input name="cboOutros" onclick="show(inescondido)" type="checkbox"> Outros</li>
-										<div id="inescondido" class="invisivel">
-											<input type="text" class="form-control">
-										</div>
+											<li>
+												<div class="custom-control custom-checkbox">
+													<input type="checkbox" name="cboTerapiaOc" id="cboTerapiaOc" class="custom-control-input">
+													<label for="cboTerapiaOc" class="custom-control-label">Terapia Ocupacional</label>
+												</div>
+											</li>
+											<li>
+												<div class="custom-control custom-checkbox">
+													<input type="checkbox" name="cboPsicologiaFa" id="cboPsicologiaFa" class="custom-control-input">
+													<label for="cboPsicologiaFa" class="custom-control-label">Psicologia Familiar</label>
+												</div>
+											</li>
+											<li>
+												<div class="custom-control custom-checkbox">
+													<input type="checkbox" name="cboFonoaudiologia" id="cboFonoaudiologia" class="custom-control-input">
+													<label for="cboFonoaudiologia" class="custom-control-label">Fonoaudiologia</label>
+												</div>
+											</li>
+											<li>
+												<div class="custom-control custom-checkbox">
+													<input type="checkbox" name="cboNeuropsico" id="cboNeuropsico" class="custom-control-input">
+													<label for="cboNeuropsico" class="custom-control-label">Neuropsicologia</label>
+												</div>
+											</li>
+											<li>
+												<div class="custom-control custom-checkbox">
+													<input type="checkbox" name="cboOftalmo" id="cboOftalmo" class="custom-control-input">
+													<label for="cboOftalmo" class="custom-control-label">Oftalmologia</label>
+												</div>
+											</li>
+											<li>
+												<div class="custom-control custom-checkbox">
+													<input type="checkbox" name="cboAvaliacaoOptometrica" id="cboAvaliacaoOptometrica" class="custom-control-input">
+													<label for="cboAvaliacaoOptometrica" class="custom-control-label">Avaliação Optométrica</label>
+												</div>
+											</li>
+											<li>
+												<div class="custom-control custom-checkbox">
+													<input type="checkbox" name="cboAssistenteSocial" id="cboAssistenteSocial" class="custom-control-input">
+													<label for="cboAssistenteSocial" class="custom-control-label">Assistente Social</label>
+												</div>
+											</li>
+											<li>
+												<div class="custom-control custom-checkbox">
+													<input type="checkbox" name="cboOutros" id="cboOutros" class="custom-control-input" onclick="show(inescondido)">
+													<label for="cboOutros" class="custom-control-label">Outros</label>
+												</div>
+											</li>
+											<input id="inescondido" type="text" class="form-control input-outros invisivel">
 									</ul>
 								</div>
 							</div>
@@ -238,33 +276,74 @@
 								<div class="card">
 				   					<div class="card-body">
 				    					<h5 class="card-title">Neuroimagem</h5>
-				    					<ul>
-											<li><input type="radio" name="grupo3" value="" onclick="hide(escondido)"> Não</li>
-											<li><input type="radio" name="grupo3" value="" onclick="show(escondido)"> Sim
-												<ul id="escondido" class="invisivel">
-												<li><input name="cboRM" type="checkbox"> RM</li>
-												<li><input name="cboTCC" type="checkbox"> TCC</li>
+				    					<ul class="list-unstyled">
+												<li>
+													<div class="custom-control custom-radio">
+														<input type="radio" name="customRbn" id="rbnNao" class="custom-control-input">
+														<label for="rbnNao" class="custom-control-label">Não</label>
+													</div>
+												</li>
+												<li>
+														<div class="custom-control custom-radio">
+															<input type="radio" name="customRbn" id="rbnSim" class="custom-control-input" onclick="show(escondido)">
+															<label for="rbnSim" class="custom-control-label">Sim</label>
+														</div>
+															<div class="custom-control custom-checkbox">
+																<ul id="escondido" class="invisivel">
+																	<li>
+																		<div class="custom-control custom-checkbox">
+																			<input name="cboRM" id="cboRM" type="checkbox" class="custom-control-input"> 
+																			<label for="cboRM" class="custom-control-label">RM</label>
+																		</div>	
+																	</li>
+																	<li>
+																		<div class="custom-control custom-checkbox">
+																			<input name="cboTCC" id="cboTCC" type="checkbox" class="custom-control-input"> 
+																			<label for="cboTCC" class="custom-control-label">TCC</label>
+																		</div>
+																	</li>
+																</ul>
+														</div>
+													</li>
 												</ul>
-											</li>
-										</ul>
-				    				</div>
+				    					</div>
 				 				</div>
 							<div class="card">
     							<div class="card-body">
 		      						<h5 class="card-title">Sanguíneos</h5>
-		      						<ul>
-										<li><input type="radio" name="grupo4" value=""> Não</li>
-										<li><input type="radio" name="grupo4" value=""> Sim</li>
-									</ul>
+		      						<ul class="list-unstyled">
+												<li>
+													<div class="custom-control custom-radio">
+														<input type="radio" name="customRadi" id="radioNao" class="custom-control-input">
+														<label for="radioNao" class="custom-control-label">Não</label>
+													</div>
+												</li>
+												<li>
+													<div class="custom-control custom-radio">
+														<input type="radio" name="customRadi" id="radioSim" class="custom-control-input">
+														<label for="radioSim" class="custom-control-label">Sim</label>
+													</div>
+												</li>
+											</ul>
 		   						</div>
 		  					</div>
-		  				<div class="card">
+		  				<div class="card custom-control custom-radio">
 		    				<div class="card-body">
 		      					<h5 class="card-title">De líquor</h5>
-		      					<ul>
-									<li><input type="radio" name="grupo5" value=""> Não</li>
-									<li><input type="radio" name="grupo5" value=""> Sim</li>
-								</ul>
+		      					<ul class="list-unstyled">
+											<li>
+												<div class="custom-control custom-radio">
+													<input type="radio" name="customRadioB" id="rdbNao" class="custom-control-input">
+													<label for="rdbNao" class="custom-control-label">Não</label>
+												</div>
+											</li>
+											<li>
+												<div class="custom-control custom-radio">
+													<input type="radio" name="customRadioB" id="rdbSim" class="custom-control-input">
+													<label for="rdbSim" class="custom-control-label">Sim</label>
+												</div>
+											</li>
+										</ul>
 		    				</div>
 	  					</div>
 	  						</div>
@@ -273,19 +352,39 @@
 		  						<div class="card">
 						  			<div class="card-body">
 						  				<h5 class="card-title">SPECT</h5>
-						  				<ul>
-											<li><input type="radio" name="grupo6" value=""> Não</li>
-											<li><input type="radio" name="grupo6" value=""> Sim</li>
-										</ul>
+						  				<ul class="list-unstyled">
+													<li>
+														<div class="custom-control custom-radio">
+															<input type="radio" name="customRadio" id="rdNao" class="custom-control-input">
+															<label for="rdNao" class="custom-control-label">Não</label>
+														</div>
+													</li>
+													<li>
+														<div class="custom-control custom-radio">
+															<input type="radio" name="customRadio" id="rdSim" class="custom-control-input">
+															<label for="rdSim" class="custom-control-label">Sim</label>
+														</div>
+													</li>
+												</ul>
 									</div>
 								</div>
 							<div class="card">
 								<div class="card-body">
 									<h5 class="card-title">EEG</h5>
-									<ul>
-										<li><input type="radio" name="grupo7" value=""> Não</li>
-										<li><input type="radio" name="grupo7" value=""> Sim</li>
-									</ul>
+									<ul class="list-unstyled">
+											<li>
+												<div class="custom-control custom-radio">
+													<input type="radio" name="radio" id="rbNao" class="custom-control-input">
+													<label for="rbNao" class="custom-control-label">Não</label>
+												</div>
+											</li>
+											<li>
+												<div class="custom-control custom-radio">
+													<input type="radio" name="radio" id="rbSim" class="custom-control-input">
+													<label for="rbSim" class="custom-control-label">Sim</label>
+												</div>
+											</li>
+										</ul>
 								</div>
 							</div>
 							<div class="card">
@@ -306,12 +405,8 @@
 	<a class="btn-topo" href="#topo">
 		<i class="fas fa-chevron-circle-up"></i>
 	</a>
-	<button id="seguir" class="btn btn-primary btn-lg quadrado">Salvar</button>
-
-	<a class="btn-topo" href="#topo">
-		<i class="fas fa-chevron-circle-up"></i>
-	</a>
-		<button id="seguir" class="btn btn-primary btn-lg quadrado" onclick="testaCpf()">Continuar</button>
+	<button id="seguir" class="btn btn-primary btn-lg margemInferior">Salvar</button>
+	<button id="seguir" class="btn btn-primary btn-lg margemInferior" onclick="testaCpf()">Continuar</button>
 
   <!-- jQuery (obrigatório para plugins JavaScript do Bootstrap) -->
     <script src="js/jquery.js"></script>

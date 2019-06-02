@@ -74,84 +74,131 @@
 		</div>
 		
 		<div class="form-row">
-			<div style="width: 48%">
+			<div class="paciente-form">
 				<label>Reside com</label>
 				<ul class="list-unstyled">
 					<div class="form-group col-md-6">
-						<li><input type="checkbox"> Mãe</li>
-						<li><input type="checkbox"> Pai</li>
-						<li><input type="checkbox"> Irmão ou irmã</li>
-						<li><input type="checkbox"> Tio</li>
-						<li><input type="checkbox"> Tia</li>
-						<li><input type="checkbox"> Sobrinho/sobrinha</li>
-						<li><input type="checkbox"> Amigo/amiga</li>
-						<li><input type="checkbox"> Cônjuge</li>
-						<li><input type="checkbox"> Filhos</li>
-						<li><input type="checkbox"> Outro</li>
-						<input type="text" class="form-control">
+							<li>
+								<div class="custom-control custom-checkbox">
+									<input name="cboMae" type="checkbox" id="cboMae" class="custom-control-input">
+									<label for="cboMae" class="custom-control-label">Mãe</label> 
+								</div>
+							</li>
+							<li>
+								<div class="custom-control custom-checkbox">
+									<input name="cboPai" type="checkbox" id="cboPai" class="custom-control-input">
+									<label for="cboPai" class="custom-control-label">Pai</label> 
+								</div>
+							</li>
+							<li>
+								<div class="custom-control custom-checkbox">
+									<input name="cboIrmao" type="checkbox" id="cboIrmao" class="custom-control-input">
+									<label for="cboIrmao" class="custom-control-label">Irmão ou Irmã</label> 
+								</div>
+							</li>
+							<li>
+								<div class="custom-control custom-checkbox">
+									<input name="cboTio" type="checkbox" id="cboTio" class="custom-control-input">
+									<label for="cboTio" class="custom-control-label">Tio</label> 
+								</div>
+							</li>
+							<li>
+								<div class="custom-control custom-checkbox">
+									<input name="cboTia" type="checkbox" id="cboTia" class="custom-control-input">
+									<label for="cboTia" class="custom-control-label">Tia</label> 
+								</div>
+							</li>
+							<li>
+								<div class="custom-control custom-checkbox">
+									<input name="cboSobrinho" type="checkbox" id="cboSobrinho" class="custom-control-input">
+									<label for="cboSobrinho" class="custom-control-label">Sobrinho ou Sobrinha</label> 
+								</div>
+							</li>
+							<li>
+								<div class="custom-control custom-checkbox">
+									<input name="cboAmigo" type="checkbox" id="cboAmigo" class="custom-control-input">
+									<label for="cboAmigo" class="custom-control-label">Amigo ou Amiga</label> 
+								</div>
+							</li>
+							<li>
+								<div class="custom-control custom-checkbox">
+									<input name="cboConjuge" type="checkbox" id="cboConjuge" class="custom-control-input">
+									<label for="cboConjuge" class="custom-control-label">Cônjuge</label> 
+								</div>
+							</li>
+							<li>
+								<div class="custom-control custom-checkbox">
+									<input name="cboFilho" type="checkbox" id="cboFilho" class="custom-control-input">
+									<label for="cboFilho" class="custom-control-label">Filhos</label> 
+								</div>
+							</li>
+							<li>
+								<div class="custom-control custom-checkbox">
+									<input name="cboOthers" type="checkbox" id="cboOthers" class="custom-control-input" onclick="show(hidden)">
+									<label for="cboOthers" class="custom-control-label">Outros</label> 
+								</div>
+							</li>
+						<input id="hidden" type="text" class="form-control invisivel">
 					</div>
 				</ul>
 			</div>
-			
-			
-				<div id="escol" class="form-group col-md-3">
+			<div class="form-group margemEnd">			
+				<div id="escol" class="form-row col-md-7">
 					<label>Escolaridade (em anos de estudo)</label>
 					<input class="form-control form-control-sm" type="number" min="0" max="50" autocomplete="off">
 				</div>
-				<div id="socio" class="form-group col-md-3">
-					<label>Nível Socioeconômico</label>
-					<input class="form-control form-control-sm" type="text" name="socioeconomico" size="10" readonly>
-				</div>
+			</div>	
 			</div>
 		
-		<div id="end" class="card" style="width: 48%;">
-			<div class="quadrado">
-				<h5 class="card-title">Endereço</h5>
-				<div class="form-row">
-					<div class="form-group col-md-4">
-						<label for="inputCEP">CEP</label>
-						<input type="text" class="form-control" placeholder="Ex.: 00000-000" cep-mask="00000-000" maxlength="10" autocomplete="off" id="cep">
-					</div>
-					<div class="form-group col-md-4">
-						<label for="inputCity">Cidade</label>
-						<input type="text" class="form-control" id="cidade">
-					</div>
+		<div class="form-row margemInferior">
+		<div id="end" class="card end-tel col-md-7">
+			<h5 class="card-title">Endereço</h5>
+			<div class="form-row">
+				<div class="form-group col-md-4">
+					<label for="inputCEP">CEP</label>
+					<input type="text" class="form-control" placeholder="Ex.: 00000-000" cep-mask="00000-000" maxlength="10" autocomplete="off" id="cep">
+				</div>
+				<div class="form-group col-md-4">
+					<label for="inputCity">Cidade</label>
+					<input type="text" class="form-control" id="cidade">
+				</div>
 
-					<div class="form-group col-md-4">
-						<label for="inputEstado">Estado</label>
-						<select id="uf" class="form-control">
-							<option>Selecione</option>
-							<option value="AC">Acre</option>
-							<option value="AL">Alagoas</option>
-							<option value="AP">Amapá</option>
-							<option value="AM">Amazonas</option>
-							<option value="BA">Bahia</option>
-							<option value="CE">Ceará</option>
-							<option value="DF">Distrito Federal</option>
-							<option value="ES">Espirito Santo</option>
-							<option value="GO">Goiás</option>
-							<option value="MA">Maranhão</option>
-							<option value="MS">Mato Grosso do Sul</option>
-							<option value="MT">Mato Grosso</option>
-							<option value="MG">Minas Gerais</option>
-							<option value="PA">Pará</option>
-							<option value="PB">Paraíba</option>
-							<option value="PR">Paraná</option>
-							<option value="PE">Pernambuco</option>
-							<option value="PI">Piauí</option>
-							<option value="RJ">Rio de Janeiro</option>
-							<option value="RN">Rio Grande do Norte</option>
-							<option value="RS">Rio Grande do Sul</option>
-							<option value="RO">Rondônia</option>
-							<option value="RR">Roraima</option>
-							<option value="SC">Santa Catarina</option>
-							<option value="SP">São Paulo</option>
-							<option value="SE">Sergipe</option>
-							<option value="TO">Tocantins</option>
-						</select>
-					</div>
+				<div class="form-group col-md-4">
+					<label for="inputEstado">Estado</label>
+					<select id="uf" class="form-control">
+						<option>Selecione</option>
+						<option value="AC">Acre</option>
+						<option value="AL">Alagoas</option>
+						<option value="AP">Amapá</option>
+						<option value="AM">Amazonas</option>
+						<option value="BA">Bahia</option>
+						<option value="CE">Ceará</option>
+						<option value="DF">Distrito Federal</option>
+						<option value="ES">Espirito Santo</option>
+						<option value="GO">Goiás</option>
+						<option value="MA">Maranhão</option>
+						<option value="MS">Mato Grosso do Sul</option>
+						<option value="MT">Mato Grosso</option>
+						<option value="MG">Minas Gerais</option>
+						<option value="PA">Pará</option>
+						<option value="PB">Paraíba</option>
+						<option value="PR">Paraná</option>
+						<option value="PE">Pernambuco</option>
+						<option value="PI">Piauí</option>
+						<option value="RJ">Rio de Janeiro</option>
+						<option value="RN">Rio Grande do Norte</option>
+						<option value="RS">Rio Grande do Sul</option>
+						<option value="RO">Rondônia</option>
+						<option value="RR">Roraima</option>
+						<option value="SC">Santa Catarina</option>
+						<option value="SP">São Paulo</option>
+						<option value="SE">Sergipe</option>
+						<option value="TO">Tocantins</option>
+					</select>
+				</div>
 
 				</div>
+				
 				<div class="form-row">
 					<div class="form-group col-md-4">
 						<label for="Address">Logradouro</label>
@@ -166,35 +213,32 @@
 						<input type="text" class="form-control" id="complemento">
 					</div>
 				</div>
-			</div>
 		</div>
-		
-		<div id="tel" class="card" style="width: 48%;">
-			<div class="quadrado">
+		<div id="tel" class="card end-tel col-md-4">
 				<h5 class="card-title">Telefones</h5>
 				<div class="form-row">
-					<div class="form-group col-md-4">
+					<div class="form-group col-md-6">
 						<label>Telefone	residencial</label>
 						<input type="text" class="form-control" placeholder="Ex.: (DDD) 0000-0000" phone-mask="(00)0000-0000" maxlength="13" autocomplete="off">
 					</div>
-					<div class="form-group col-md-4">
+					<div class="form-group col-md-6">
 						<label>Telefone	comercial</label>
 						<input type="text" class="form-control" placeholder="Ex.: (DDD) 0000-0000" phone-mask="(00)0000-0000" maxlength="13" autocomplete="off">
 					</div>
 				</div>
 				<div class="form-row">
-					<div class="form-group col-md-4">
+					<div class="form-group col-md-6">
 						<label>	Telefone celular	</label>
 						<input type="text" class="form-control" placeholder="Ex.: (DDD) 00000-0000" cel-sp-mask="(00)00000-0000" maxlength="14" autocomplete="off">
 					</div>
-					<div class="form-group col-md-4">
+					<div class="form-group col-md-6">
 						<label>	Outro	</label>
 						<input type="text" class="form-control" placeholder="Ex.: (DDD) 00000-0000" cel-sp-mask="(00)00000-0000" maxlength="14" autocomplete="off">
 					</div>
 				</div>
-			</div>
 		</div>
-	</div>
+	</div>	
+
 	
 	<div class="card">
 	<div class="card-body">	
@@ -202,64 +246,189 @@
 		<br/>
 		<div class="form-row">
 		
-		<div class="form-group col-md-4">
+		<div class="form-group col-md-4 custom-control custom-checkbox">
 			<h5 class="card-title">Gerais</h5>
 				<ul class="list-unstyled">
-					<li><input type="checkbox"> AVC</li>
-					<li><input type="checkbox"> Meningite</li>
-					<li><input type="checkbox"> Cefaléia</li>
-					<li><input type="checkbox"> Epilepsia</li>
-					<li><input type="checkbox"> Doença coronariana</li>
-					<li><input type="checkbox"> Problema renal</li>
-					<li><input type="checkbox"> Problema hepático</li>
-					<li><input type="checkbox"> Dislipidemia</li>
-					<li><input type="checkbox"> Hipo ou hiper tireóidismo</li>
-					<li><input type="checkbox"> Distúbio pulmonar</li>
-					<li><input type="checkbox"> Tabagismo</li>
-					<li><input type="checkbox"> Etilismo</li>
-					<li><input type="checkbox"> Outros</li>
-				<input type="text" class="form-control input-outros">
+					<li>
+						<div class="custom-control custom-checkbox">
+							<input name="cboAvc" type="checkbox" id="cboAvc" class="custom-control-input">
+							<label for="cboAvc" class="custom-control-label">AVC</label>
+						</div>
+					</li>
+					<li>
+						<div class="custom-control custom-checkbox">
+								<input name="cboMeningite" type="checkbox" id="cboMeningite" class="custom-control-input">
+								<label for="cboMeningite" class="custom-control-label">Meningite</label>
+						</div>
+					</li>
+					<li>
+						<div class="custom-control custom-checkbox">
+							<input name="cboCefaleia" type="checkbox" id="cboCefaleia" class="custom-control-input">
+							<label for="cboCefaleia" class="custom-control-label">Cefaléia</label> 
+						</div>
+					</li>
+					<li>
+						<div class="custom-control custom-checkbox">
+							<input name="cboEpilepsia" type="checkbox" id="cboEpilepsia" class="custom-control-input">
+							<label for="cboEpilepsia" class="custom-control-label">Epilepsia</label> 
+						</div>
+					</li>
+					<li>
+						<div class="custom-control custom-checkbox">
+								<input name="cboCoronariana" type="checkbox" id="cboCoronariana" class="custom-control-input">
+								<label for="cboCoronariana" class="custom-control-label">Doença coronariana</label> 
+						</div>
+					</li>
+					<li>
+						<div class="custom-control custom-checkbox">
+								<input name="cboRenal" type="checkbox" id="cboRenal" class="custom-control-input">
+								<label for="cboRenal" class="custom-control-label">Problema renal</label> 
+						</div>
+					</li>
+					<li>
+						<div class="custom-control custom-checkbox">
+								<input name="cboHepatico" type="checkbox" id="cboHepatico" class="custom-control-input">
+								<label for="cboHepatico" class="custom-control-label">Problema hepático</label> 
+						</div>
+					</li>
+					<li>
+						<div class="custom-control custom-checkbox">
+							<input name="cboDislipidemia" type="checkbox" id="cboDislipidemia" class="custom-control-input">
+							<label for="cboDislipidemia" class="custom-control-label">Dislipidemia</label> 
+						</div>
+					</li>	
+					<li>
+						<div class="custom-control custom-checkbox">
+							<input name="cboHipo" type="checkbox" id="cboHipo" class="custom-control-input">
+							<label for="cboHipo" class="custom-control-label">Hipo ou hiper tireóidismo</label> 
+						</div>
+					</li>
+					<li>
+						<div class="custom-control custom-checkbox">
+							<input name="cboPulmonar" type="checkbox" id="cboPulmonar" class="custom-control-input">
+							<label for="cboPulmonar" class="custom-control-label">Distúbio pulmonar</label> 
+						</div>
+					</li>
+					<li>
+						<div class="custom-control custom-checkbox">
+							<input name="cboTabagismo" type="checkbox" id="cboTabagismo" class="custom-control-input">
+							<label for="cboTabagismo" class="custom-control-label">Tabagismo</label> 
+						</div>
+					</li>
+					<li>
+						<div class="custom-control custom-checkbox">
+							<input name="cboEtilismo" type="checkbox" id="cboEtilismo" class="custom-control-input">
+							<label for="cboEtilismo" class="custom-control-label">Etilismo</label> 
+						</div>
+					</li>
+					<li>
+						<div class="custom-control custom-checkbox">
+							<input name="cboOutros" type="checkbox" id="cboOutros" class="custom-control-input" onclick="show(escond)">
+							<label for="cboOutros" class="custom-control-label">Outros</label>
+						</div>
+					</li>
+					<input id="escond" type="text" class="form-control input-outros invisivel">
 				</ul>
 		</div>
 		
 		<div class="form-group col-md-4">
 			<h5 class="card-title">Problemas cognitivos pré-morbidos</h5>
 			<ul class="list-unstyled">
-				<li><input type="checkbox"> Dificuldade de aprendizagem na infância</li>
-				<li><input type="checkbox"> Mau desempenho escolar</li>
-				<li><input type="checkbox"> Repetição de ano escolar</li>
-				<li><input type="checkbox"> Outros</li>
-				<input type="text" class="form-control input-outros">
+				<li>
+					<div class="custom-control custom-checkbox">
+						<input name="cboDificuldade" type="checkbox" id="cboDificuldade" class="custom-control-input">
+						<label for="cboDificuldade" class="custom-control-label">Dificuldade de aprendizagem na infância</label> 
+					</div>
+				</li>
+				<li>
+					<div class="custom-control custom-checkbox">
+						<input name="cboDesempenho" type="checkbox" id="cboDesempenho" class="custom-control-input">
+						<label for="cboDesempenho" class="custom-control-label">Mau desempenho escolar</label> 
+					</div>
+				</li>	
+				<li>
+					<div class="custom-control custom-checkbox">
+						<input name="cboRepeticao" type="checkbox" id="cboRepeticao" class="custom-control-input">
+						<label for="cboRepeticao" class="custom-control-label">Repetição de ano escolar</label> 
+					</div>
+				</li>
+				<li>
+					<div class="custom-control custom-checkbox">
+						<input name="cboOutro" type="checkbox" id="cboOutro" class="custom-control-input" onclick="show(hided)">
+						<label for="cboOutro" class="custom-control-label">Outros</label> 
+					</div>
+				</li>
+				<input id="hided" type="text" class="form-control input-outros invisivel">
 			</ul>
 		</div>
 		
 		<div class="form-group col-md-4">
 			<h5 class="card-title">Problemas comportamentais pré-morbidos</h5>
 				<ul class="list-unstyled">
-					<li><input type="checkbox"> Presença de delírios e/ou alucinações em algum momento da vida</li>
-					<li><input type="checkbox"> Presença de agressividade/violência em algum momento da vida</li>
-					<li><input type="checkbox"> Envolvimento em conflitos interpessoais</li>
-					<li><input type="checkbox"> Outros</li>
-					<input type="text" class="form-control input-outros">
+					<li>
+						<div class="custom-control custom-checkbox">
+							<input name="cboDelirios" type="checkbox" id="cboDelirios" class="custom-control-input">
+							<label for="cboDelirios" class="custom-control-label">Presença de delírios e/ou alucinações em algum momento da vida</label> 
+						</div>
+					</li>	
+					<li>
+						<div class="custom-control custom-checkbox">
+							<input name="cboAgressividade" type="checkbox" id="cboAgressividade" class="custom-control-input">
+							<label for="cboAgressividade" class="custom-control-label">Presença de agressividade/violência em algum momento da vida</label> 
+						</div>
+					</li>
+					<li>
+						<div class="custom-control custom-checkbox">
+							<input name="cboConflitos" type="checkbox" id="cboConflitos" class="custom-control-input">
+							<label for="cboConflitos" class="custom-control-label">Envolvimento em conflitos interpessoais</label> 
+						</div>
+					</li>
+					<li>
+						<div class="custom-control custom-checkbox">
+							<input name="cboOther" type="checkbox" id="cboOther" class="custom-control-input" onclick="show(hiden)">
+							<label for="cboOther" class="custom-control-label">Outros</label> 
+						</div>
+					</li>
+					<input id="hiden" type="text" class="form-control input-outros invisivel">
 				</ul>
 		</div>
 			
-		<div class="form-group col-md-4">
+		<div class="form-group col-md-4 custom-control custom-checkbox">
 			<h5 class="card-title">Problemas de humor pré-morbidos</h5>
 				<ul class="list-unstyled">
-					<li><input type="checkbox"> Presença de episódio depressivo/sintomas depressivos</li>
-					<li><input type="checkbox"> Presença de sintomas ansiosos/ansiedade generalizada </li>
-					<li><input type="checkbox"> Presença de distúrbio bipolar</li>
-					<li><input type="checkbox"> Presença de sintomas de outros distúrbios ansiosos</li>
+					<li>
+						<div class="custom-control custom-checkbox">
+							<input name="cboDepressao" type="checkbox" class="custom-control-input" id="cboDepressao">
+							<label for="cboDepressao" class="custom-control-label">Presença de episódio depressivo/sintomas depressivos</label>
+						</div>
+					</li>	
+					<li>
+						<div class="custom-control custom-checkbox">	
+							<input name="cboAnsiedade" type="checkbox" class="custom-control-input" id="cboAnsiedade">
+							<label for="cboAnsiedade" class="custom-control-label">Presença de sintomas ansiosos/ansiedade generalizada</label>
+						</div>
+					 </li>	
+					<li>
+						<div class="custom-control custom-checkbox">
+							<input name="cboBipolaridade" type="checkbox" class="custom-control-input" id="cboBipolaridade">
+							<label for="cboBipolaridade" class="custom-control-label">Presença de distúrbio bipolar</label>
+						</div>
+					</li>
+					<li>
+						<div class="custom-control custom-checkbox">
+							<input name="cboDisturbios" type="checkbox" class="custom-control-input" id="cboDisturbios">
+							<label for="cboDisturbios" class="custom-control-label">Presença de sintomas de outros distúrbios ansiosos</label>
+						</div>
+					</li>
 				</ul>
 		</div>	
 	
 		<div class="form-group col-md-4">
 			<h5 class="card-title">Antecedentes familiares</h5>
-			<label>Fatores de risco vascular</label>
-			<input type="text" class="form-control input-outros">
-			<label>Outro fator relevante</label>
-			<input type="text" class="form-control input-outros">
+			<label for="inputRiscos">Fatores de risco vascular</label>
+			<input type="text" class="form-control input-outros" id="inputRiscos">
+			<label for="inputOutros">Outro fator relevante</label>
+			<input type="text" class="form-control input-outros" id="inputOutros">
 		</div>
 		
 		</div>
@@ -291,46 +460,70 @@
 						</div>
 					<li>
 						<div class="custom-control custom-radio">
-						  <input type="radio" id="customRadioOutro" name="customRadio" class="custom-control-input">
+						  <input type="radio" id="customRadioOutro" name="customRadio" class="custom-control-input" onclick="show(esconde)">
 						  <label class="custom-control-label" for="customRadioOutro">Outro</label>
 						</div>
 					</li>
-					<input type="text" class="form-control input-outros">
+					<input type="text" class="form-control input-outros invisivel" id="esconde">
 				</ul>
 			</div>
 			
-			<div class="form-group col-md-4 custom-control custom-checkbox">
+			<div class="form-group col-md-4">
 					<h5 class="card-title">Uso de drogas ilícitas</h5>
-				<ul class="list-unstyled">
-				<form class="form-inline">
-					<li><input type="radio" onclick="hide(escondido)" name="grupo" value=""> Não</li>
-					<li><input type="radio" onclick="show(escondido)" name="grupo" value="" id="sim"> Sim</li>
-						<ul id="escondido" class="invisivel"> 
-							<li>
-								<input name="cboCocaina" type="checkbox" class="custom-control-input" id="cboCocaina">
-								<label class="custom-control-label" for="cboCocaina">Cocaína</label>
-							</li>
-							<li>
-								<input name="cboCrack" type="checkbox" class="custom-control-input" id="cboCrack" >
-								<label class="custom-control-label" for="cboCrack">Crack</label>
-							</li>
-							<li>
-								<input name="cboHeroina" type="checkbox" class="custom-control-input" id="cboHeroina">
-								<label class="custom-control-label" for="cboHeroina">Heroína</label>
-							</li>
-							<li>
-								<input name="cboEcstasy" type="checkbox" class="custom-control-input" id="cboEcstasy">
-								<label class="custom-control-label" for="cboEcstasy">Ecstasy e/ou estimulantes</label>
-							</li>
-							<li>
-								<input name="cboMaconha" type="checkbox" class="custom-control-input" id="cboMaconha">
-								<label class="custom-control-label" for="cboMaconha">Maconha</label>
-							</li>
-							<li>
-								<input name="cboOutros" type="checkbox" class="custom-control-input" id="cboOutros">
-								<label class="custom-control-label" for="cboOutros">Outros</label>
-							</li>
-						<input type="text" class="form-control input-outros">
+					<ul class="list-unstyled">
+					<form class="form-inline">
+						<li>
+							<div class="custom-control custom-radio">
+								<input  type="radio" id="radioNao" name="radioB" class="custom-control-input" onclick="hide(escondido)">
+								<label for="radioNao" class="custom-control-label"> Não</label>
+							</div>
+						</li>	
+						<li>
+							<div class="custom-control custom-radio">
+								<input type="radio" onclick="show(escondido)" name="radioB" id="radioSim" class="custom-control-input">
+								<label for="radioSim" class="custom-control-label margemEsquerda">Sim</label>
+							</div>
+						</li>
+							<ul id="escondido" class="invisivel"> 
+								<div class="custom-control custom-checkbox">
+									<li>
+										<div class="custom-control custom-checkbox">
+											<input name="cboCocaina" type="checkbox" class="custom-control-input" id="cboCocaina">
+											<label class="custom-control-label" for="cboCocaina">Cocaína</label>
+									</div>
+									</li>
+									<li>
+										<div class="custom-control custom-checkbox">
+											<input name="cboCrack" type="checkbox" class="custom-control-input" id="cboCrack">
+											<label class="custom-control-label" for="cboCrack">Crack</label>
+										</div>
+									</li>
+									<li>
+										<div class="custom-control custom-checkbox">
+											<input name="cboHeroina" type="checkbox" class="custom-control-input" id="cboHeroina">
+											<label class="custom-control-label" for="cboHeroina">Heroína</label>
+									</div>	
+									</li>
+									<li>
+										<div class="custom-control custom-checkbox">
+											<input name="cboEcstasy" type="checkbox" class="custom-control-input" id="cboEcstasy">
+											<label class="custom-control-label" for="cboEcstasy">Ecstasy e/ou estimulantes</label>
+									</div>
+									</li>
+									<li>
+										<div class="custom-control custom-checkbox">
+											<input name="cboMaconha" type="checkbox" class="custom-control-input" id="cboMaconha">
+											<label class="custom-control-label" for="cboMaconha">Maconha</label>
+										</div>
+									</li>
+									<li>
+										<div class="custom-control custom-checkbox">
+											<input name="cboOut" type="checkbox" class="custom-control-input" id="cboOut" onclick="show(escondi)">
+											<label class="custom-control-label" for="cboOut">Outros</label>			
+									</div>	
+									<input id="escondi" type="text" class="form-control input-outros invisivel">
+									</li>
+							</div>
 						</ul>
 					</form>
 				</ul>

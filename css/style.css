@@ -37,6 +37,16 @@ div.esquerda {
 	width: 48%;
 }
 
+.end-tel {
+	padding: 1%;
+}
+
+#tel {
+	display: flex;
+	padding: 1%;
+	margin-left: 2%;
+}
+
 .center {
 	width: 100vw;
     height: 80vh;
@@ -128,4 +138,36 @@ div.esquerda {
 	background-color: transparent;
 	float: right;
 	margin-right: 1%;
+}
+
+
+.janela-flexivel{
+	margin-left: 8.2%;
+}
+
+.index{
+	width: 25rem;
+}
+
+.paciente-form{
+	width: 48%;
+}
+
+#entrar {
+	width: 100%;
+	height: 100%;
+}
+
+.alinhamento{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+.margemInferior{
+	margin-bottom: 10px;
+}
+
+.margemEnd{
+	float: right; width: 60%;
 }
